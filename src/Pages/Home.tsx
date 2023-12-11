@@ -1,10 +1,11 @@
+import { Hero } from "../utils/Path";
 
 const Home = () => {
   return (
     <div>
-    home  
+      <Hero />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

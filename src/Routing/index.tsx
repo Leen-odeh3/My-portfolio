@@ -8,7 +8,8 @@ const index = () => {
       <Box>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </Box>
     </BrowserRouter>

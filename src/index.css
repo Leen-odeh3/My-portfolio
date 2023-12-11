@@ -1,10 +1,10 @@
-html{
+html {
   scroll-behavior: smooth;
+  cursor:pointer;
 }
+
 body{
   background-color: #edf2fe;
-}
-*{
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
@@ -15,4 +15,62 @@ a{
 }
 .name{
   font-family: 'Edu NSW ACT Foundation', cursive !important;
+}
+.info{
+  font-family: Google Sans Medium !important;
+}
+.facebook ,.github,.linkedin,.email,.insta,.twitter,.gitlab{
+margin: 0px 3px 10px;
+color:white;
+width:40px;
+height: 40px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 50px;
+}
+.facebook:hover ,.github:hover ,.linkedin:hover ,.email:hover ,.insta:hover ,.twitter:hover ,.gitlab:hover{
+  background-color: #001c55;
+transition: all .5s ease;
+} 
+.facebook{
+  background-color: #1877F2;
+}
+.github{
+  background-color: black;
+}
+.linkedin{
+  background-color: #0077B5;
+}
+.email{
+  background-color: #D14836;
+}
+.insta{
+  background-color: #E4405F;
+}
+.gitlab{
+  background-color: #FCA326;
+  font-size: 25px;
+}
+.twitter{
+  background-color: #1DA1F2;
+}
+
+@media (min-width:700px){
+  a.links{
+margin: 10px 5px !important;
+  }
+  
+}
+.link-btn:hover{
+  color:#001c55 !important;
+}
+::-webkit-scrollbar{
+  width:12px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #d670cf;
+  border-radius: 10px;
 }
