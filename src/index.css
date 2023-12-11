@@ -55,7 +55,7 @@ transition: all .5s ease;
   background-color: #1DA1F2;
 }
 
-@media (min-width:1000px){
+@media (min-width:700px){
   a.links{
 margin: 10px 5px !important;
   }

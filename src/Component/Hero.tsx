@@ -40,12 +40,7 @@ const Hero = () => {
             <Stack
               direction="row"
               spacing={3}
-              sx={{
-                flexWrap: "wrap",
-                alignItems: "center",
-                justifyContent: "center",  
-                textAlign:"center"
-              }}
+        
             >
               {Social.map((socialLink, index) => (
                 <a
