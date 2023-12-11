@@ -6,9 +6,11 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
+import styled from "@emotion/styled";
 import Container from "@mui/material/Container";
-import MenuItem from "@mui/material/MenuItem";
+
 import { NavLink } from "react-router-dom";
+import { Stack } from "@mui/material";
 
 const links = ["Home", "Education", "Experience", "Projects", "Contact"];
 
@@ -25,37 +27,30 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
+  const StyledNavLink = styled(NavLink)`
+    &:hover {
+      background-color: #a6e1fa;
+    }
+    &.active {
+      font-weight:600;
+    }
+  `;
+
   return (
     <AppBar
       position="static"
-      sx={{ backgroundColor: "#edf2fe", boxShadow: "none", color: "#001C55" }}
+      sx={{
+        backgroundColor: "#edf2fe",
+        boxShadow: "none",
+        color: "#001C55",
+        padding: "10px 30px",
+      }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            flexGrow={1}
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            leen odeh
-          </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               sx={{ color: "#001C55" }}
@@ -65,15 +60,6 @@ function ResponsiveAppBar() {
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
@@ -81,47 +67,50 @@ function ResponsiveAppBar() {
               }}
             >
               {links.map((link) => (
-                <MenuItem key={link} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" sx={{ color: "#001C55" }}>
-                    {link}
-                  </Typography>
-                </MenuItem>
+                <StyledNavLink
+                  to={`/${link.toLowerCase()}`}
+                  key={link}
+                  onClick={handleCloseNavMenu}
+                  style={{
+                    color: "#001C55",
+                    display: "block",
+                    padding: "20px",
+                    width: "500px",
+                    textAlign: "center",
+                  }}
+                >
+                  {link}
+                </StyledNavLink>
               ))}
             </Menu>
           </Box>
           {/* ----------------------------------- */}
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+          <Stack direction="row" spacing={1} flexGrow={1} sx={{alignItems:"center"}}>
+            <Typography sx={{ fontSize: "25px" }}>&lt;</Typography>
+            <Typography variant="h4" className="name">leen odeh</Typography>
+            <Typography sx={{ fontSize: "25px" }}>/&gt;</Typography>
+          </Stack>
+          <Box
             sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
+              display: { xs: "none", md: "flex" },
+              justifyContent: "flex-end",
+              alignItems: "flex-end",
             }}
           >
-            leen odeh
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {links.map((link) => (
-              <NavLink
+              <StyledNavLink
                 to={`/${link.toLowerCase()}`}
                 key={link}
                 onClick={handleCloseNavMenu}
                 style={{
                   color: "#001C55",
                   display: "block",
-                  padding: "0px 15px"
+                  padding: "20px",
                 }}
               >
                 {link}
-              </NavLink>
+              </StyledNavLink>
             ))}
           </Box>
         </Toolbar>

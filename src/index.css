@@ -13,3 +13,6 @@ body{
 a{
   text-decoration: none;
 }
+.name{
+  font-family: 'Edu NSW ACT Foundation', cursive !important;
+}
