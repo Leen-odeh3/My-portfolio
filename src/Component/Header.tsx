@@ -41,6 +41,7 @@ function ResponsiveAppBar() {
         boxShadow: "none",
         color: "#001C55",
         padding: "10px 30px",
+        marginBottom:"20px"
       }}
     >
       <Container maxWidth="xl">
@@ -70,10 +71,11 @@ function ResponsiveAppBar() {
                   onClick={handleCloseNavMenu}
                   style={{
                     color: "#001C55",
-                    display: "block",
+                    display: "flex",
                     padding: "20px",
-                    width: "500px",
+                    width: "300px",
                     textAlign: "center",
+                    justifyContent:"center"
                   }}
                 >
                   {link}
