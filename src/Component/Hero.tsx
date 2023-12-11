@@ -1,5 +1,6 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { Social } from "../data/Social";
+import RightSide from "./RightSide";
 
 const Hero = () => {
   return (
@@ -8,6 +9,7 @@ const Hero = () => {
         flexGrow: 1,
         margin: { xs: "10px 20px", md: "10px 30px" },
         padding: { xs: "10px 20px", md: "20px 40px" },
+        alignItems: 'center'
       }}
     >
       <Grid container spacing={3}>
@@ -15,7 +17,7 @@ const Hero = () => {
           <Box className="info">
             <Typography
               component="h1"
-              sx={{ fontSize: "40px", marginBottom: "20px", color: "#001c55" }}
+              sx={{ fontSize: "40px", marginBottom: "20px", color: "#001c55",paddingTop: { md: "70px" } }}
             >
               Leen Odeh
             </Typography>
@@ -58,7 +60,7 @@ const Hero = () => {
         </Grid>
 
         <Grid item xs={12} md={6}>
-          leen
+          <RightSide/>
         </Grid>
       </Grid>
     </Box>
