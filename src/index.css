@@ -1,6 +1,8 @@
-html{
+html {
   scroll-behavior: smooth;
+  cursor:pointer;
 }
+
 body{
   background-color: #edf2fe;
   padding: 0%;
@@ -60,4 +62,15 @@ transition: all .5s ease;
 margin: 10px 5px !important;
   }
   
+}
+.link-btn:hover{
+  color:#001c55 !important;
+}
+::-webkit-scrollbar{
+  width:12px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #d670cf;
+  border-radius: 10px;
 }
