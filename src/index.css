@@ -57,11 +57,10 @@ transition: all .5s ease;
   background-color: #1DA1F2;
 }
 
-@media (min-width:700px){
+@media (min-width:800px){
   a.links{
 margin: 10px 5px !important;
   }
-  
 }
 .link-btn:hover{
   color:#001c55 !important;

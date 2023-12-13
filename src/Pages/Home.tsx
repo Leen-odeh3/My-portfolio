@@ -1,9 +1,10 @@
-import { Hero } from "../utils/Path";
+import { Hero, About } from "../utils/Path";
 
 const Home = () => {
   return (
     <div>
       <Hero />
+      <About />
     </div>
   );
 };

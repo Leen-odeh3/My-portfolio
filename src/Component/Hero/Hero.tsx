@@ -1,7 +1,7 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
-import { Social } from "../data/Social";
-import RightSide from "./RightSide";
-import Buttons from "./Buttons";
+import { Social } from "../../data/Social";
+import RightSide from "../RightSide/RightSide";
+import Buttons from "../Buttons/Buttons";
 
 const Hero = () => {
   return (

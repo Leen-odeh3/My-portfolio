@@ -41,7 +41,7 @@ function ResponsiveAppBar() {
         boxShadow: "none",
         color: "#001C55",
         padding: "10px 30px",
-        marginBottom:"20px"
+        marginBottom:"10px"
       }}
     >
       <Container maxWidth="xl">
