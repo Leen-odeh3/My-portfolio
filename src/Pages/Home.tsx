@@ -1,10 +1,11 @@
-import { Hero, About } from "../utils/Path";
+import { Hero, About, SkillsBar } from "../utils/Path";
 
 const Home = () => {
   return (
     <div>
       <Hero />
       <About />
+      <SkillsBar />
     </div>
   );
 };
