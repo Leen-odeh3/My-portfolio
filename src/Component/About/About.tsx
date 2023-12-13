@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import { Skills } from "../../data/Skills";
 
 const About = () => {
@@ -14,13 +14,11 @@ const About = () => {
       <Typography
         component="h4"
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          textAlign: "center",
           fontSize: "40px",
           marginTop: "20px",
           marginBottom: "20px",
-          fontWeight: "600px",
+          fontWeight: 600,
           fontFamily: "Montserrat",
         }}
       >
@@ -31,12 +29,18 @@ const About = () => {
           <Grid
             item
             xs={12}
-            md={4}
-            sx={{ display: { xs: "none", md: "flex" } }}
+            md={5}
+            sx={{ display: { lg: "block", md: "none", xs: "none" } }}
           >
-            <img src="../../../public/about.png" alt="img" width="100%" />
+            <img
+              src="../../../public/about.png"
+              alt="img"
+              width="75%"
+              height="270px"
+              style={{ objectFit: "cover" }}
+            />
           </Grid>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} lg={7} md={12}>
             <Typography
               component="p"
               sx={{
@@ -46,13 +50,26 @@ const About = () => {
             >
               CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK
             </Typography>
-            <Box>
-      {Skills.map((skill) => (
-        <Box key={skill.name} style={{ backgroundColor: skill.color }}>
-          <img src={skill.logo} alt={skill.name} />
-        </Box>
-      ))}
-    </Box>
+            <Box sx={{ marginTop: "30px" }}>
+              <Stack
+                direction="row"
+                spacing={2}
+                sx={{ marginTop: "20px", flexWrap: "wrap" }}
+              >
+                {Skills.map((skill) => (
+                  <img
+                    key={skill.name}
+                    src={skill.logo}
+                    style={{
+                      marginBottom: "10px",
+                      width: "fit-content",
+                      height: "30px",
+                    }}
+                    className="skill"
+                  />
+                ))}
+              </Stack>
+            </Box>
           </Grid>
         </Grid>
       </Box>
