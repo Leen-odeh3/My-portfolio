@@ -1,5 +1,6 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { Skills } from "../../data/Skills";
+import Description from "./Description";
 
 const About = () => {
   return (
@@ -18,6 +19,7 @@ const About = () => {
           fontSize: "40px",
           marginTop: "20px",
           marginBottom: "20px",
+          margin:"auto",
           fontWeight: 600,
           fontFamily: "Montserrat",
         }}
@@ -25,31 +27,19 @@ const About = () => {
         What I do
       </Typography>
       <Box>
+        <Typography
+          component="p"
+          sx={{
+            color: "rgb(134, 142, 150)",
+            margin: { md: "10px 0px", xs: "0px" },
+            textAlign:"center"
+          }}
+        >
+          CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK
+        </Typography>
+
         <Grid container spacing={3}>
-          <Grid
-            item
-            xs={12}
-            md={5}
-            sx={{ display: { lg: "block", md: "none", xs: "none" } }}
-          >
-            <img
-              src="../../../public/about.png"
-              alt="img"
-              width="75%"
-              height="270px"
-              style={{ objectFit: "cover" }}
-            />
-          </Grid>
-          <Grid item xs={12} lg={7} md={12}>
-            <Typography
-              component="p"
-              sx={{
-                color: "rgb(134, 142, 150)",
-                margin: { md: "10px 0px", xs: "0px" },
-              }}
-            >
-              CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK
-            </Typography>
+          <Grid item xs={12} md={6}>
             <Box sx={{ marginTop: "30px" }}>
               <Stack
                 direction="row"
@@ -70,6 +60,17 @@ const About = () => {
                 ))}
               </Stack>
             </Box>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Description />
+
+            {/* <img
+              src="../../../public/about.png"
+              alt="img"
+              width="75%"
+              height="270px"
+              style={{ objectFit: "cover" }}
+            /> */}
           </Grid>
         </Grid>
       </Box>
