@@ -8,7 +8,7 @@ const Hero = () => {
     <Box
       sx={{
         flexGrow: 1,
-        margin: { xs: "10px 20px", md: "10px 30px" },
+        margin: { xs: "10px 20px", md: "0px 30px" },
         padding: { xs: "10px 20px", md: "20px 40px" },
         alignItems: "center",
       }}
@@ -20,7 +20,7 @@ const Hero = () => {
               component="h1"
               sx={{
                 fontSize: "40px",
-                marginBottom: "20px",
+                marginBottom: {md:"20px",xs:"10px"},
                 color: "#001c55",
                 paddingTop: { md: "10px" },
               }}
