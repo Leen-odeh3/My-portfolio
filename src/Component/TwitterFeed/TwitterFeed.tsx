@@ -19,8 +19,8 @@ const TwitterFeed = ({ username, tweetLimit }: { username: string; tweetLimit: n
   }, []); 
 
   return (
-    <Container maxWidth="sm" sx={{ marginTop: 2 }}>
-      <Card sx={{ backgroundColor: theme.palette.background.default }}>
+    <Container maxWidth="sm" sx={{ marginTop: 2 ,marginBottom:4 }}>
+      <Card sx={{ backgroundColor: theme.palette.background.default}}>
         <CardContent>
           {/* <Typography variant="h5" component="div" sx={{ display: "flex", alignItems: "center", color: theme.palette.primary.main }}>
             <TwitterIcon sx={{ mr: 1 }} />
