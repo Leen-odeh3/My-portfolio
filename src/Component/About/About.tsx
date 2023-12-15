@@ -1,6 +1,6 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
-import { Skills } from "../../data/Skills";
-import Description from "./Description";
+
+
 
 const About = () => {
   return (
@@ -38,40 +38,31 @@ const About = () => {
           CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK
         </Typography>
 
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={3}>
             <Box sx={{ marginTop: "30px" }}>
               <Stack
                 direction="row"
                 spacing={2}
                 sx={{ marginTop: "20px", flexWrap: "wrap" }}
               >
-                {Skills.map((skill) => (
-                  <img
-                    key={skill.name}
-                    src={skill.logo}
-                    style={{
-                      marginBottom: "10px",
-                      width: "fit-content",
-                      height: "30px",
-                    }}
-                    className="skill"
-                  />
-                ))}
+                Languages
               </Stack>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Description />
-
-            {/* <img
-              src="../../../public/about.png"
-              alt="img"
-              width="75%"
-              height="270px"
-              style={{ objectFit: "cover" }}
-            /> */}
+          <Grid item xs={12} md={3}>
+      
+front
           </Grid>
+          <Grid item xs={12} md={3}>
+    back
+
+      </Grid>
+      <Grid item xs={12} md={3}>
+  
+Tools
+      </Grid>
+      
         </Grid>
       </Box>
     </Box>
