@@ -70,6 +70,6 @@ margin: 10px 5px !important;
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: #d670cf;
+  background-color: rgb(109, 131, 242);
   border-radius: 10px;
 }
