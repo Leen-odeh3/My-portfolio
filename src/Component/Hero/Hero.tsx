@@ -35,7 +35,6 @@ const Hero = () => {
               sx={{
                 color: "rgb(127, 141, 170)",
                 fontSize: { xs: "20px" },
-                lineHeight: "40px",
                 margin: { md: "20px 40px 15px 0px", xs: "20px auto 20px" },
               }}
             >
