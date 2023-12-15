@@ -22,17 +22,16 @@ const Description = () => {
   ];
 
   return (
-    <>
+    <div>
       {desc.map((item, index) => (
         <Box key={index} display="flex" alignItems="center" mb={1} mt={3}>
-          <img src={item.imageSrc} alt={`Image ${index + 1}`} style={{ width: "35px", height: "35px", marginRight: "8px" }} />
           <i className="bi bi-stars" style={{ color: "rgb(255 169 0)", fontSize: "25px" }}></i>
           <Typography variant="body1" ml={1} component="p" sx={{ color: "#7F8DAA", fontSize: "17px", marginBottom: { xs: "5px", md: "6px" } }}>
             {item.text}
           </Typography>
         </Box>
       ))}
-    </>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@ const SkillStack: React.FC<SkillStackProps> = ({ skills }) => {
       <Stack
         direction="row"
         spacing={0}
-        sx={{ marginTop: "10px", flexWrap: "wrap"}}
+        sx={{ marginTop: "10px", flexWrap: "wrap",paddingBottom:"20px"}}
       >
         {skills.map((skill) => (
           <div key={skill.name} style={{ padding: "5px", marginRight: "10px",textAlign:"center" }}>
