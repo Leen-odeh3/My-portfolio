@@ -44,7 +44,7 @@ function SkillsBar() {
               borderRadius: 6,
               backgroundColor: "rgba(0,0, 0, 0.1)",
               "& .MuiLinearProgress-bar": {
-                backgroundColor: "#d670cf" }
+                backgroundColor: "rgb(109, 131, 242)" }
             }}
           />
         </Box>
