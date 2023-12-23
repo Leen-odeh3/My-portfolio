@@ -1,7 +1,13 @@
-import  { useEffect } from "react";
+import { useEffect } from "react";
 import { Card, CardContent, Container, useTheme } from "@mui/material";
 
-const TwitterFeed = ({ username, tweetLimit }: { username: string; tweetLimit: number }) => {
+const TwitterFeed = ({
+  username,
+  tweetLimit,
+}: {
+  username: string;
+  tweetLimit: number;
+}) => {
   const theme = useTheme();
 
   useEffect(() => {
@@ -10,17 +16,16 @@ const TwitterFeed = ({ username, tweetLimit }: { username: string; tweetLimit: n
     script.charset = "utf-8";
     script.async = true;
 
-    
     document.body.appendChild(script);
 
     return () => {
       document.body.removeChild(script);
     };
-  }, []); 
+  }, []);
 
   return (
-    <Container maxWidth="sm" sx={{ marginTop: 2 ,marginBottom:4 }}>
-      <Card sx={{ backgroundColor: theme.palette.background.default}}>
+    <Container maxWidth="sm" sx={{ marginTop: 4, marginBottom: 4 }}>
+      <Card sx={{ backgroundColor: theme.palette.background.default }}>
         <CardContent>
           {/* <Typography variant="h5" component="div" sx={{ display: "flex", alignItems: "center", color: theme.palette.primary.main }}>
             <TwitterIcon sx={{ mr: 1 }} />

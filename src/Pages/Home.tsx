@@ -1,12 +1,12 @@
 
-import { Hero, About, SkillsBar, TwitterFeed } from "../utils/Path";
+import { Hero, About, TwitterFeed } from "../utils/Path";
 
 const Home = () => {
   return (
     <div>
       <Hero />
       <About />
-      <SkillsBar />
+      {/* <SkillsBar /> */}
       <TwitterFeed username="leen_odeh2803" tweetLimit={4} />
     </div>
   );

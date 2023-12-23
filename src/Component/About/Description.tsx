@@ -22,7 +22,7 @@ const Description = () => {
   ];
 
   return (
-    <div>
+    <div style={{marginBottom:"40px"}}>
       {desc.map((item, index) => (
         <Box key={index} display="flex" alignItems="center" mb={1} mt={3}>
           <i className="bi bi-stars" style={{ color: "rgb(255 169 0)", fontSize: "25px" }}></i>
