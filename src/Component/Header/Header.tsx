@@ -37,7 +37,7 @@ function ResponsiveAppBar() {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: "#edf2fe",
+        backgroundColor: "white",
         boxShadow: "none",
         color: "#001C55",
         padding: "10px 30px",
