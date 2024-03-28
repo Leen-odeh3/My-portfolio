@@ -154,3 +154,17 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+//
+document.getElementById("sendButton").addEventListener("click", function() {
+
+  var fullName = document.querySelector('input[name="fullname"]').value;
+  var email = document.querySelector('input[name="email"]').value;
+  var message = document.querySelector('textarea[name="message"]').value;
+  
+
+  var link = "mailto:leenodeh287@gmail.com"
+             + "?subject=" + encodeURIComponent("رسالة جديدة من " + fullName)
+             + "&body=" + encodeURIComponent("البريد الإلكتروني: " + email + "\n\n" + message);
+
+  window.location.href = link;
+});
