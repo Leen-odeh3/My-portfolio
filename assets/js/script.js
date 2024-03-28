@@ -163,8 +163,8 @@ document.getElementById("sendButton").addEventListener("click", function() {
   
 
   var link = "mailto:leenodeh287@gmail.com"
-             + "?subject=" + encodeURIComponent("رسالة جديدة من " + fullName)
-             + "&body=" + encodeURIComponent("البريد الإلكتروني: " + email + "\n\n" + message);
+             + "?subject=" + encodeURIComponent("New Message From" + fullName)
+             + "&body=" + encodeURIComponent("Email : " + email + "\n\n" + message);
 
   window.location.href = link;
 });
